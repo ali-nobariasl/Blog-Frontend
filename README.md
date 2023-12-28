@@ -1,3 +1,5 @@
+![image](https://github.com/ali-nobariasl/Blog-Frontend/assets/56727121/2f00a1f2-e2c0-4b9e-9793-7968d8a2610f)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
