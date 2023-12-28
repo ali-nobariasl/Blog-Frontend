@@ -1,13 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
 import React, { useEffect, useState } from 'react';
-import Post from './post';
+
+import logo from './logo.svg';
+import Post from './Post';
+import NewPost from './NewPost';
+import './App.css';
+
 
 const BASE_URL = 'http://localhost:8000/'
 
 function App() {
 
   const [posts, setPosts]= useState([])
+
   useEffect(() => {
     fetch(BASE_URL+'post/all').then(response =>{
       const json = response.json()
@@ -24,16 +28,20 @@ function App() {
       console.log(err);
       alert(err)
     })
-  })
+  }, [])
+
   return (
     <div className="App">
       <div className='blog_title'>Open city Blog </div>
-      <div className='app_post'>
+      <div className='app_posts'>
         {
           posts.map(post => (
             <Post post={post} />
           ))
         }
+      </div>
+      <div className='new_post'>
+        <NewPost />
       </div>
     </div>
   );
