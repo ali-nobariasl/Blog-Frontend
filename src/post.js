@@ -13,9 +13,33 @@ function Post({post}){
 
     }, [])
 
+    const handleDelete = (event) => {
+        event?.preventDefault()
+
+        const requestOptions = {
+            method: 'DELETE'
+        }
+        fetch(BASE_URL+'post/'+post.id, requestOptions).then(response =>{
+            if (response.ok){
+                window.location.reload()
+            }
+            throw response
+        }).catch(error =>{
+            console.log(error);
+        })
+    }
+
     return (
         <div className="post" >
             <image className="post_image" src={imageUrl} />
+            <div className="post_content" >
+                <div className="post_title">{post.title}</div>
+                <div className="post_creator">by {post.creator}</div>
+                <div className="post_text">{post.content}</div>
+                <div className="post_deleted">
+                    <button onClick={handleDelete}>Delete</button>
+                </div>
+            </div>
         </div>
     )
 }

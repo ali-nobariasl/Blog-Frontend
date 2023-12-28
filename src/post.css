@@ -15,3 +15,27 @@
     padding-right: 10px;
     margin-bottom: auto ;
 }
+
+.post_content{
+    display: block;
+}
+
+.post_title{
+    font-size: pre-line;
+}
+
+.post_text{
+    white-space: pre-line;
+}
+
+.post_delete{
+    margin: 10px
+}
+
+.post_creator{
+    font-size: small;
+    font-style: italic;
+    margin: 5px;
+    margin-left:10px ;
+
+}
