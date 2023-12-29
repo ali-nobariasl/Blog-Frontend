@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import './NewPost.css'
+import { link } from "react-router-dom";
+
 
 const BASE_URL = 'http://localhost:8000/'
 

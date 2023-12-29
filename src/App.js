@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className='blog_title'>Open city Blog </div>
+      <div className='blog_title'>Book Suggestion Blog </div>
       <div className='app_posts'>
         {
           posts.map(post => (
